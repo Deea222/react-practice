@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+const mongoose = require('mongoose');
+const { Schema } = mongoose.Schema;
 
-const userSchema = new Schema({
+const userSchema = mongoose.Schema({
   name: {
     type: String,
     maxLength: 50,
@@ -13,7 +13,7 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    minLength: 50,
+    minLength: 3,
   },
   lastName: {
     type: String,
